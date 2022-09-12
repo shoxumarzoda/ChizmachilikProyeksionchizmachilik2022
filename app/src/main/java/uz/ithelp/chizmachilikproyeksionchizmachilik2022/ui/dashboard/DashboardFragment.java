@@ -16,10 +16,12 @@ import java.util.List;
 import uz.ithelp.chizmachilikproyeksionchizmachilik2022.R;
 import uz.ithelp.chizmachilikproyeksionchizmachilik2022.databinding.FragmentDashboardBinding;
 
-public class DashboardFragment extends Fragment {
+public class DashboardFragment extends Fragment implements UserAdapter.SelectedUser {
 
     private FragmentDashboardBinding binding;
-
+    RecyclerView recyclerView;
+    List<ModelRcycler> modelRcyclers = new ArrayList<>();
+    UserAdapter userAdapter;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -30,10 +32,32 @@ public class DashboardFragment extends Fragment {
         View root = binding.getRoot();
 
 
+        // ruyhatni eloni va sozlanmasi
+        recyclerView = root.findViewById(R.id.recyclerView2);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL ,false));
+//        recyclerView.addItemDecoration(new DividerItemDecoration(requireContext(),0));
 
+        initial();
+
+        userAdapter  = new UserAdapter(modelRcyclers,  this);
+        recyclerView.setAdapter(userAdapter);
 
 
         return root;
+    }
+
+    private void initial() {
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"Qirqimlar                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"2-ish-kesim                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"2-ish-profil                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"3-ish-og'ma                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"4-ish-og'ma                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"5-ish-frontal                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"6-ish-slinder                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"7-_ish-pogna                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"8- ish-siniq                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"9-ish-qovirg'a                                                          ","asd"));
+
     }
 
 
@@ -44,6 +68,8 @@ public class DashboardFragment extends Fragment {
     }
 
 
+    @Override
+    public void selectedUser(ModelRcycler modelRcycler) {
 
-
+    }
 }

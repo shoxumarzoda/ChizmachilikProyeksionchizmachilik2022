@@ -50,7 +50,7 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
     }
 
     private void initial() {
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"KIRISH                    ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"KIRISH                                                              ","asd"));
         modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"Chizmachilik fanining O‘zbekistonda rivojlanishi va o‘qitilishining qisqacha tarixi","asd"));
         modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"1.1-§.\tBuyumni proyeksiyalar tekisliklariga proyeksiyalash                        ","asd"));
         modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"1.2-§.\tAsosiy ko‘rinishlar.                                                       ","asd"));

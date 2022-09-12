@@ -5,9 +5,12 @@
       <map>
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/ChizmachilikProyeksionchizmachilik2022/app/src/main/res/layout-v28/item_recycler.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/ChizmachilikProyeksionchizmachilik2022/app/src/main/res/layout/activity_main.xml" value="0.30808080808080807" />
+        <entry key="..\:/Users/TIQQM/AndroidStudioProjects/ChizmachilikProyeksionchizmachilik2022/app/src/main/res/layout/fragment_dashboard.xml" value="0.1" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/ChizmachilikProyeksionchizmachilik2022/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/TIQQM/AndroidStudioProjects/ChizmachilikProyeksionchizmachilik2022/app/src/main/res/layout/fragment_notifications.xml" value="0.22894736842105262" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/ChizmachilikProyeksionchizmachilik2022/app/src/main/res/layout/item_recycler.xml" value="0.33" />
         <entry key="..\:/Users/TIQQM/AndroidStudioProjects/ChizmachilikProyeksionchizmachilik2022/app/src/main/res/layout/item_recycler1.xml" value="0.23092105263157894" />
+        <entry key="..\:/Users/TIQQM/AndroidStudioProjects/ChizmachilikProyeksionchizmachilik2022/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22894736842105262" />
       </map>
     </option>
   </component>

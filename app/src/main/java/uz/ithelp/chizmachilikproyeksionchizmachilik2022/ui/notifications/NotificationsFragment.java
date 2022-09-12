@@ -9,29 +9,68 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import uz.ithelp.chizmachilikproyeksionchizmachilik2022.R;
 import uz.ithelp.chizmachilikproyeksionchizmachilik2022.databinding.FragmentNotificationsBinding;
 
-public class NotificationsFragment extends Fragment {
+public class NotificationsFragment extends Fragment implements UserAdapter.SelectedUser {
 
     private FragmentNotificationsBinding binding;
 
+    RecyclerView recyclerView;
+    List<ModelRcycler> modelRcyclers = new ArrayList<>();
+    UserAdapter userAdapter;
+
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        NotificationsViewModel notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+
 
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textNotifications;
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        // ruyhatni eloni va sozlanmasi
+        recyclerView = root.findViewById(R.id.recyclerView3);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL ,false));
+//        recyclerView.addItemDecoration(new DividerItemDecoration(requireContext(),0));
+
+        initial();
+
+        userAdapter  = new UserAdapter(modelRcyclers,  this);
+        recyclerView.setAdapter(userAdapter);
+
         return root;
+    }
+
+    private void initial() {
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"M.B.Shah, B.C.Rana. Engineering Drawing         ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"Textbook of Engineering Drawing K. Venkata Reddy  ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"CHIZMACHILIK" +   "(CHIZMACHILIK FANIDA" +  "KONSTRUKSIYALASH" +    "ASOSLARI)  IKROMJON RAHMONOV," +
+                "A’ZAMJON VALIYEV","asd"));
+
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"CHIZMACHILIKI. Rahmonov, N. Qirg‘izboyeva," + "A. Ashirboyev, A.Valiyev, B.Nigmanov         ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"CHIZMACHILIK" +   "(GEOMETRIK VA PROYEKSION CHIZMACHILIK)     M.K.Xalimov Z.E.Mirzaliyev F.E.Оchilov","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"CHIZMACHILIK     Yodgorov.J                                                               ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
+
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    @Override
+    public void selectedUser(ModelRcycler modelRcycler) {
+
     }
 }

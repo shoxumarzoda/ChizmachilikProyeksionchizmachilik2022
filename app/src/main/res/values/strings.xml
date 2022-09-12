@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Chizmachilik (Proyeksion chizmachilik) 2022</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Asosiy qism</string>
+    <string name="title_dashboard">Grafik ko`rinishlar</string>
+    <string name="title_notifications">Adabiyotlar</string>
+
+
 </resources>
