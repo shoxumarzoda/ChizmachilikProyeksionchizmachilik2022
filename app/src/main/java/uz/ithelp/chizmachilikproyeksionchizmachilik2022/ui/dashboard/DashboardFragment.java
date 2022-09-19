@@ -1,5 +1,6 @@
 package uz.ithelp.chizmachilikproyeksionchizmachilik2022.ui.dashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import uz.ithelp.chizmachilikproyeksionchizmachilik2022.MainActivity3;
 import uz.ithelp.chizmachilikproyeksionchizmachilik2022.R;
 import uz.ithelp.chizmachilikproyeksionchizmachilik2022.databinding.FragmentDashboardBinding;
 
@@ -47,7 +49,7 @@ public class DashboardFragment extends Fragment implements UserAdapter.SelectedU
     }
 
     private void initial() {
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"Qirqimlar                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"Qirqimlar                                                          ","MGMMOQEjSFA"));
         modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"2-ish-kesim                                                          ","asd"));
         modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"2-ish-profil                                                          ","asd"));
         modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"3-ish-og'ma                                                          ","asd"));
@@ -70,6 +72,10 @@ public class DashboardFragment extends Fragment implements UserAdapter.SelectedU
 
     @Override
     public void selectedUser(ModelRcycler modelRcycler) {
+
+        Intent intent = new Intent(getContext(), MainActivity3.class);
+        intent.putExtra("data", modelRcycler.getLoadUrl());
+        startActivity(intent);
 
     }
 }
