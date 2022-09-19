@@ -47,19 +47,19 @@ public class NotificationsFragment extends Fragment implements UserAdapter.Selec
     }
 
     private void initial() {
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"M.B.Shah, B.C.Rana. Engineering Drawing         ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"Textbook of Engineering Drawing K. Venkata Reddy  ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"CHIZMACHILIK" +   "(CHIZMACHILIK FANIDA" +  "KONSTRUKSIYALASH" +    "ASOSLARI)  IKROMJON RAHMONOV," +
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"M.B.Shah, B.C.Rana. Engineering Drawing         ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"Textbook of Engineering Drawing K. Venkata Reddy  ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"CHIZMACHILIK" +   "(CHIZMACHILIK FANIDA" +  "KONSTRUKSIYALASH" +    "ASOSLARI)  IKROMJON RAHMONOV," +
                 "A’ZAMJON VALIYEV","asd"));
 
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"CHIZMACHILIKI. Rahmonov, N. Qirg‘izboyeva," + "A. Ashirboyev, A.Valiyev, B.Nigmanov         ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"CHIZMACHILIK" +   "(GEOMETRIK VA PROYEKSION CHIZMACHILIK)     M.K.Xalimov Z.E.Mirzaliyev F.E.Оchilov","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"CHIZMACHILIK     Yodgorov.J                                                               ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"CHIZMACHILIKI. Rahmonov, N. Qirg‘izboyeva," + "A. Ashirboyev, A.Valiyev, B.Nigmanov         ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"CHIZMACHILIK" +   "(GEOMETRIK VA PROYEKSION CHIZMACHILIK)     M.K.Xalimov Z.E.Mirzaliyev F.E.Оchilov","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"CHIZMACHILIK     Yodgorov.J                                                               ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
 
     }
 
@@ -72,5 +72,12 @@ public class NotificationsFragment extends Fragment implements UserAdapter.Selec
     @Override
     public void selectedUser(ModelRcycler modelRcycler) {
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        modelRcyclers.clear();
+        initial();
     }
 }

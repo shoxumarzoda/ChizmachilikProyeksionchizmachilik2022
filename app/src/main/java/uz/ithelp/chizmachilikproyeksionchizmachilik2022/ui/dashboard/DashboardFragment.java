@@ -49,16 +49,16 @@ public class DashboardFragment extends Fragment implements UserAdapter.SelectedU
     }
 
     private void initial() {
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"Qirqimlar                                                          ","MGMMOQEjSFA"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"2-ish-kesim                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"2-ish-profil                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"3-ish-og'ma                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"4-ish-og'ma                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"5-ish-frontal                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"6-ish-slinder                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"7-_ish-pogna                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"8- ish-siniq                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.ic_home_black_24dp,"9-ish-qovirg'a                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"Qirqimlar                                                          ","MGMMOQEjSFA"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"2-ish-kesim                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"2-ish-profil                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"3-ish-og'ma                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"4-ish-og'ma                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"5-ish-frontal                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"6-ish-slinder                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"7-_ish-pogna                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"8- ish-siniq                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"9-ish-qovirg'a                                                          ","asd"));
 
     }
 
@@ -77,5 +77,12 @@ public class DashboardFragment extends Fragment implements UserAdapter.SelectedU
         intent.putExtra("data", modelRcycler.getLoadUrl());
         startActivity(intent);
 
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        modelRcyclers.clear();
+        initial();
     }
 }
