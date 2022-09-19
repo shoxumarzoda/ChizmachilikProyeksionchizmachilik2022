@@ -48,17 +48,18 @@ public class DashboardFragment extends Fragment implements UserAdapter.SelectedU
         return root;
     }
 
+
     private void initial() {
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"Qirqimlar                                                          ","MGMMOQEjSFA"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"2-ish-kesim                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"2-ish-profil                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"3-ish-og'ma                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"4-ish-og'ma                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"5-ish-frontal                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"6-ish-slinder                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"7-_ish-pogna                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"8- ish-siniq                                                          ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"9-ish-qovirg'a                                                          ","asd"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"Qirqimlar                                                          ","_moiRwhFoeg"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"2-ish-kesim                                                          ","zE4S7om_yCw"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"2-ish-profil                                                          ","RKt-ZKveEH0"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"3-ish-og'ma                                                          ","APplhzrDIDA"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"4-ish-og'ma                                                          ","qicPOaCXcNo"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"5-ish-frontal                                                          ","CDi5Yay5JMc"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"6-ish-slinder                                                          ","ZzwgJeH0HPA"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"7-_ish-pogna                                                          ","4jwnorl1Ouk"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"8- ish-siniq                                                          ","0m4HhkgAYuw"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.image11,"9-ish-qovirg'a                                                          ","CwA_lvehZQQ"));
 
     }
 

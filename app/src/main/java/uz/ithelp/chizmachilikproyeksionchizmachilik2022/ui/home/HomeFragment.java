@@ -1,6 +1,7 @@
 package uz.ithelp.chizmachilikproyeksionchizmachilik2022.ui.home;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import uz.ithelp.chizmachilikproyeksionchizmachilik2022.MainActivity2;
 import uz.ithelp.chizmachilikproyeksionchizmachilik2022.R;
@@ -67,6 +69,7 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
         modelRcyclers.add(new ModelRcycler(R.drawable.tuplam7transformed,"1.12-§.\tChizmachilik fani (ko’rinishlar, qirqim va kesimlar)dan test savollari","https://github.com/shoxumarzoda/ChizmachilikProyeksionchizmachilik2022/raw/master/12.pdf"));
         modelRcyclers.add(new ModelRcycler(R.drawable.tuplam5transformed,"1.13-§.\tChizmachilik fani (ko’rinishlar, qirqim va kesimlar)dan  terminologik lug‘at","https://github.com/shoxumarzoda/ChizmachilikProyeksionchizmachilik2022/raw/master/13.pdf"));
         modelRcyclers.add(new ModelRcycler(R.drawable.tuplam4transformed,"Adabiyotlar                                                                     ","https://github.com/shoxumarzoda/ChizmachilikProyeksionchizmachilik2022/raw/master/adabiyotlar.pdf"));
+        modelRcyclers.add(new ModelRcycler(R.drawable.xumn,"Turayev Xumoyiddin Abdug’afforovich                                           ",""));
 
     }
 
@@ -79,7 +82,14 @@ public class HomeFragment extends Fragment implements UserAdapter.SelectedUser {
     @Override
     public void selectedUser(ModelRcycler modelRcycler) {
 
-        startActivity(new Intent(getContext(), MainActivity2.class).putExtra("data",modelRcycler.getLoadUrl()));
+        if(modelRcycler.getLessonName().toLowerCase().startsWith("turayev")){
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/Xumoyiddinturayev"));
+            startActivity(intent);
+        }
+        else {
+            startActivity(new Intent(getContext(), MainActivity2.class).putExtra("data", modelRcycler.getLoadUrl()));
+        }
+
     }
 
     @Override

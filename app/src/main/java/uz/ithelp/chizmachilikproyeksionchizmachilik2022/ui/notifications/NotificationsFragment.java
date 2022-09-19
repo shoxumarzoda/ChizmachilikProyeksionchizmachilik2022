@@ -55,11 +55,7 @@ public class NotificationsFragment extends Fragment implements UserAdapter.Selec
         modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"CHIZMACHILIKI. Rahmonov, N. Qirg‘izboyeva," + "A. Ashirboyev, A.Valiyev, B.Nigmanov         ","asd"));
         modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"CHIZMACHILIK" +   "(GEOMETRIK VA PROYEKSION CHIZMACHILIK)     M.K.Xalimov Z.E.Mirzaliyev F.E.Оchilov","asd"));
         modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"CHIZMACHILIK     Yodgorov.J                                                               ","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
-        modelRcyclers.add(new ModelRcycler(R.drawable.imgbook,"","asd"));
+
 
     }
 
